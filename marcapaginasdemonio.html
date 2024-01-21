@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitíMonroe</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+
+</head>
+<body>
+<!-- Aquí empieza la cabecera y el nav de la tienda. Es un header con el título de la página. Contiene un nav, el cual es una lista. Dentro del apartado
+"Tienda" he creado otra lista (un submenú) para seleccionar dos secciones, láminas y marcapáginas. Al lado del apartado "Tienda" he decidido 
+añadir un icono de corazón, a modo de indentificador de que esa sección en concreto es un menú desplegable.-->
+<header class="cabecera">
+    <nav class="cabecera__nav">
+        <a class="cabecera__enlace" href="index.html" title="titulo"><img src="./media/img/logo.png" alt="logo" class="cabecera__nav__titulo"></a>
+        <button type="button" class="boton__nav" id="abreCabecera"><i class="fa-solid fa-bars" id="iconoBoton"></i></button>
+        <ul class="cabecera__lista">
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="ilustracion.html" title="linkIlustracion" target="_blank">Ilustración</a>
+            </li>
+            <!-- He puesto al subemnú una clase específica "for desktop" para la versión ordenador: -->
+            <li class="cabecera__elementoLista for_desktop">
+                <span class="cabecera__enlace">Tienda<i class="fa-solid fa-heart"></i></span>
+                <ul class="cabecera__lista__submenu">
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="laminas.html" title="linkLaminas" target="_blank">Láminas</a>
+                    </li>
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="marcapaginas.html" title="linkMarcapaginas" target="_blank">Marcapáginas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- He repetido la lista del submenú para el formato para móvil, añadiendole una clase "for mobile": -->
+            <li class="cabecera__elementoLista for_mobile" id="botonMovil__tienda">
+                <span class="cabecera__enlace">Tienda<i class="fa-solid fa-heart"></i></span>
+                <ul class="cabecera__lista__submenu">
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="laminas.html" title="linkLaminas" target="_blank">Láminas</a>
+                    </li>
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="marcapaginas.html" title="linkMarcapaginas" target="_blank">Marcapáginas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Estos son los dos últimos secciones del nav, Sobre mí y Contacto:  -->
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="sobremi.html" title="linkSobreMi" target="_blank">Sobre mí</a>
+            </li>
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="contacto.html" title="linkContacto" target="_blank">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Aquí comienza la sección de marcapáginas con diseño de demonio y calendario. Se estructura en un div, cuya función es proporcionar el color
+        de fondo de la página y recoge a todos los demas divs. Luego un div con un display flex para recoger a su vez el div que contiene la parte del texto, una imagen
+        y un vídeo, y otro div con una imagen grande principal que está colocado justo al lado. Por último una sección con un div que recoge dos imágenes
+        y un vídeo de igual tamaño -->
+    <section>
+        <div class="fondoSeccion__demonio">
+            <div class="seccionDemonio">
+                <div class="seccionDemonio__texto">
+                    <h2 class="tituloTexto">Marcapáginas DemonioxCalendario 2024 TM</h2>
+                    <h3 class="contenidoTexto">4€</h3>
+                    <p class="contenidoTexto">Marcapáginas impreso en papel grueso reciclado.<br>¡Por una cara un demonio, por otra un mágico calendario!</p>
+                    <p class="contenidoTexto">Tamaño 7x13cm.</p>
+                <div class="contenidoMedia">
+                    <video autoplay muted defaultMuted loop="loop" class="videoDemonio">
+                        <source src="media/video/videodemonio1.mp4" type="video/mp4">
+                        </video>
+                    <img src="./media/img/marcapaginasdemonio2.jpg" alt="marcapaginasdemonio2" class="imagenMedia">
+                </div>        
+                </div>
+                
+                <div class="seccionDemonio__imagen">
+                    <img src="./media/img/marcapaginasdemonio1.jpg" alt="marcapaginasdemonio1" class="imagenDemonio">
+                </div>
+            </div>
+            
+            <div class="seccionDemonio__imagenUltima">
+                <img src="./media/img/marcapaginasdemonio3.jpg" alt="marcapaginasdemonio3" class="seccionimagen">
+                <img src="./media/img/marcapaginasdemonio4.jpg" alt="marcapaginasdemonio4" class="seccionimagen">
+                <video autoplay muted defaultMuted loop="loop" class="videoDemonio2">
+                    <source src="media/video/videodemonio2.mp4" type="video/mp4" class="videodemonio2">
+                    </video>
+           </div>
+        </div>
+    </section>
+
+     <!-- Por último, el footer. Contiene los iconos de las redes sociales (Twitter, Instagram, Linkedln y correo Gmail), y los mismos títulos
+    de la barra de navegación (Home, Tienda, Sobre mí y Contacto) para que al clikcar te lleve a su página correspondiente.Todos poseen un 
+    hover de color morado. -->
+     <footer>
+        <div class="footer">
+            <div class="footerContenido__media">
+                <a href="https://twitter.com/PaquiGuzmn" class="footerEnlace footerEnlace__icono__movil" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/titimonroe_/?igshid=YmMyMTA2M2Y%3D" class="footerEnlace footerEnlace__icono__movil" target="_blank" ><i class="fa-brands fa-instagram"></i>
+                <a href="https://www.linkedin.com/in/paqui-guzm%C3%A1n-s%C3%A1nchez-240152234/" class="footerEnlace footerEnlace__icono__movil" target="_blank"><i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.google.com/intl/es/gmail/about/" class="footerEnlace footerEnlace__icono__movil"><i class="fa-regular fa-envelope"></i>
+                <br>
+                <div class="footerContenido__texto">
+                    <a href="index.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Home</span></a>
+                    <a href="marcapaginas.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Tienda</span></a>
+                    <a href="sobremi.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Sobre mí</span></a>
+                    <a href="contacto.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Contacto</span></a>
+                </div>  
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="./index.js"></script>
+</html>

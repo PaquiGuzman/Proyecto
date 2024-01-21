@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitíMonroe</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+
+</head>
+<body>
+   <!-- He mantenido la cabecera en todas las páginas. Aquí empieza la cabecera y el nav de la tienda. Es un header con el título de la página. Contiene un nav, el cual es una lista. Dentro del apartado
+"Tienda" he creado otra lista (un submenú) para seleccionar dos secciones, láminas y marcapáginas. Al lado del apartado "Tienda" he decidido 
+añadir un icono de corazón, a modo de indentificador de que esa sección en concreto es un menú desplegable.-->
+<header class="cabecera">
+    <nav class="cabecera__nav">
+        <a class="cabecera__enlace" href="index.html" title="titulo"><img src="./media/img/logo.png" alt="logo" class="cabecera__nav__titulo"></a>
+        <button type="button" class="boton__nav" id="abreCabecera"><i class="fa-solid fa-bars" id="iconoBoton"></i></button>
+        <ul class="cabecera__lista">
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="ilustracion.html" title="linkIlustracion" target="_blank">Ilustración</a>
+            </li>
+            <!-- He puesto al subemnú una clase específica "for desktop" para la versión ordenador: -->
+            <li class="cabecera__elementoLista for_desktop">
+                <span class="cabecera__enlace">Tienda<i class="fa-solid fa-heart"></i></span>
+                <ul class="cabecera__lista__submenu">
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="laminas.html" title="linkLaminas" target="_blank">Láminas</a>
+                    </li>
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="marcapaginas.html" title="linkMarcapaginas" target="_blank">Marcapáginas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- He repetido la lista del submenú para el formato para móvil, añadiendole una clase "for mobile": -->
+            <li class="cabecera__elementoLista for_mobile" id="botonMovil__tienda">
+                <span class="cabecera__enlace">Tienda<i class="fa-solid fa-heart"></i></span>
+                <ul class="cabecera__lista__submenu">
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="laminas.html" title="linkLaminas" target="_blank">Láminas</a>
+                    </li>
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="marcapaginas.html" title="linkMarcapaginas" target="_blank">Marcapáginas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Estos son los dos últimos secciones del nav, Sobre mí y Contacto:  -->
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="sobremi.html" title="linkSobreMi" target="_blank">Sobre mí</a>
+            </li>
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="contacto.html" title="linkContacto" target="_blank">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    
+    <!-- A continuación una sección para las ilustraciones. Se compone de un div principal que hace un display flex a su vez a tres divs
+    que contienen cada uno una imagen y un título. A partir del segundo bloque de divs llevan un "loading lazy",ya que son muchas imágenes,
+    para que éstas no se carguen hasta que no hagas scroll hacia abajo.-->
+    <section>
+        <div class="fondoIlustracion">
+            <div class="displayIlustracion">
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Traición</p>
+                    <img src="./media/img/ojo.png" alt="ojo" class="ImgIlustracion">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Venganza</p>
+                    <img src="./media/img/revenge.png" alt="venganza" class="ImgIlustracion">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">El diablo alado</p>
+                    <img src="./media/img/diablo.png" alt="diablo" class="ImgIlustracion">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Cerebro de cristal</p>
+                    <img src="./media/img/cerebrocristal.png" alt="cerebroCristal" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Gemelas</p>
+                    <img src="./media/img/gemelas.png" alt="gemelas" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">MarilynXFrida</p>
+                    <img src="./media/img/marilynxfrida.png" alt="marilynxfrida" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Cartel aceite de oliva 2024</p>
+                    <img src="./media/img/cartel.png" alt="cartel" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Viñeta Burbuja</p>
+                    <img src="./media/img/viñetaburbuja.png" alt="burbuja" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Pesadilla</p>
+                    <img src="./media/img/pesadilla.png" alt="pesadilla" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div> 
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Viñeta Amor propio</p>
+                    <img src="./media/img/viñetaAmorpropio.png" alt="amorPropio" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Viñeta Géminis 1</p>
+                    <img src="./media/img/viñetaGeminis1.png" alt="geminis1" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Viñeta Géminis 2</p>
+                    <img src="./media/img/viñetageminis2.png" alt="geminis2" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Ángeles negros</p>
+                    <img src="./media/img/angelesnegros.png" alt="angelesNegros" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Caos</p>
+                    <img src="./media/img/caos.png" alt="caos" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Pretty Hurts</p>
+                    <img src="./media/img/prettyhurts.png" alt="prettyHurts" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Decisiones</p>
+                    <img src="./media/img/decisiones.png" alt="decisiones" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">F*cking regla</p>
+                    <img src="./media/img/regla.png" alt="regla" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Drinking tears</p>
+                    <img src="./media/img/drinkingtears.png" alt="ombligo" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion"> Butterfly Clit</p>
+                    <img src="./media/img/clit.png" alt="clit" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Cherries</p>
+                    <img src="./media/img/cherrys.png" alt="cherries" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Gemini Issues</p>
+                    <img src="./media/img/ajedrez.png" alt="ajedrez" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">She a rebel!</p>
+                    <img src="./media/img/jackie.png" alt="jackie" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Demonio, Ángel y Alien</p>
+                    <img src="./media/img/marcapaginasdemonio.png" alt="demonio" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Open my heart</p>
+                    <img src="./media/img/polveratmfrontal.png" alt="polvera" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>
+            <div class="displayIlustracion">    
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">But I'm a creep</p>
+                    <img src="./media/img/polveratmtrasera.png" alt="polvera" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Escritorio TM</p>
+                    <img src="./media/img/escritorioTm.png" alt="escritorio" class="ImgIlustracion" loading="lazy">
+                </div>
+                <div class="cardIlustracion">
+                    <p class="tituloIlustracion">Mar de emociones</p>
+                    <img src="./media/img/marEmociones.jpg" alt="mar" class="ImgIlustracion" loading="lazy">
+                </div>
+            </div>                                                                
+        </div>
+    </section>
+
+     <!-- Por último, el footer. Contiene los iconos de las redes sociales (Twitter, Instagram, Linkedln y correo Gmail), y los mismos títulos
+    de la barra de navegación (Home, Tienda, Sobre mí y Contacto) para que al clikcar te lleve a su página correspondiente.Todos poseen un 
+    hover de color morado. -->
+     <footer>
+        <div class="footer">
+            <div class="footerContenido__media">
+                <a href="https://twitter.com/PaquiGuzmn" class="footerEnlace footerEnlace__icono__movil" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/titimonroe_/?igshid=YmMyMTA2M2Y%3D" class="footerEnlace footerEnlace__icono__movil" target="_blank" ><i class="fa-brands fa-instagram"></i>
+                <a href="https://www.linkedin.com/in/paqui-guzm%C3%A1n-s%C3%A1nchez-240152234/" class="footerEnlace footerEnlace__icono__movil" target="_blank"><i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.google.com/intl/es/gmail/about/" class="footerEnlace footerEnlace__icono__movil"><i class="fa-regular fa-envelope"></i>
+                <br>
+                <div class="footerContenido__texto">
+                    <a href="index.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Home</span></a>
+                    <a href="marcapaginas.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Tienda</span></a>
+                    <a href="sobremi.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Sobre mí</span></a>
+                    <a href="contacto.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Contacto</span></a>
+                </div>  
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="./index.js"></script>
+</html>

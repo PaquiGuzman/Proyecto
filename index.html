@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitíMonroe</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+
+</head>
+<body>
+
+<!-- Aquí empieza la cabecera y el nav de la tienda. Es un header con el título de la página. Contiene un nav, el cual es una lista.
+Dentro del apartado "Tienda" he creado otra lista (un submenú) para seleccionar dos secciones, láminas y marcapáginas.
+Al lado del apartado "Tienda" he decidido añadir un icono de corazón, a modo de indentificador de que esa sección en concreto es 
+un menú desplegable.-->
+<header class="cabecera">
+    <nav class="cabecera__nav">
+        <a class="cabecera__enlace" href="index.html" title="titulo"><img src="./media/img/logo.png" alt="logo" class="cabecera__nav__titulo"></a>
+        <button type="button" class="boton__nav" id="abreCabecera"><i class="fa-solid fa-bars" id="iconoBoton"></i></button>
+        <ul class="cabecera__lista">
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="ilustracion.html" title="linkIlustracion" target="_blank">Ilustración</a>
+            </li>
+            <!-- He puesto al subemnú una clase específica "for desktop" para la versión ordenador: -->
+            <li class="cabecera__elementoLista for_desktop">
+                <span class="cabecera__enlace">Tienda<i class="fa-solid fa-heart"></i></span>
+                <ul class="cabecera__lista__submenu">
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="laminas.html" title="linkLaminas" target="_blank">Láminas</a>
+                    </li>
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="marcapaginas.html" title="linkMarcapaginas" target="_blank">Marcapáginas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- He repetido la lista del submenú para el formato para móvil, añadiendole una clase "for mobile": -->
+            <li class="cabecera__elementoLista for_mobile" id="botonMovil__tienda">
+                <span class="cabecera__enlace">Tienda<i class="fa-solid fa-heart"></i></span>
+                <ul class="cabecera__lista__submenu">
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="laminas.html" title="linkLaminas" target="_blank">Láminas</a>
+                    </li>
+                    <li class="cabecera__elementoLista cabecera__elementoLista--submenu">
+                        <a class="cabecera__enlace cabecera__enlace--submenu" href="marcapaginas.html" title="linkMarcapaginas" target="_blank">Marcapáginas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Estos son los dos últimos secciones del nav, Sobre mí y Contacto:  -->
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="sobremi.html" title="linkSobreMi" target="_blank">Sobre mí</a>
+            </li>
+            <li class="cabecera__elementoLista">
+                <a class="cabecera__enlace" href="contacto.html" title="linkContacto" target="_blank">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Justo debajo del nav hay una barra de progreso, para que cuando se haga scroll en la página se vaya moviendo la barra en función del porcentaje
+    de la pantalla donde se encuentre. -->
+    <div class="progressContainer">
+        <div class="progressBar" id="bar"></div>
+    </div>
+</header>
+
+
+<!-- Aquí empieza el main de la página. Comienza con una sección que contiene un slide show de tres imágenes que se mueven solas y 
+    si clickas sobre cada uno de los puntos de abajo, te llevan a su sección correspondiente. A ambos lados de las diapositivas hay un botón 
+    con el icono de flecha para pasar las imágenes. -->
+<main>
+    <section>
+        <!-- Este div se encarga del color de fondo de la sección -->
+        <div class="fondoSlideshow">
+            <div class="slideshowContainer">
+                <div class="slideshowContainer__diapositiva slideshowContainer__fade">
+                    <a href="marcapaginasdemonio.html" target="_blank">
+                        <img src="./media/img/marcapaginasdemonio1.jpg" alt="diapositiva1" class="slideshowContainer__img">
+                    </a>
+                </div>
+        
+                <div class="slideshowContainer__diapositiva slideshowContainer__fade">
+                    <a href="marcapaginaspolvera.html" target="_blank">
+                        <img src="./media/img/marcapaginaspolvera1.jpg" alt="diapositiva2" class="slideshowContainer__img">
+                    </a>
+                </div>
+        
+                <div class="slideshowContainer__diapositiva slideshowContainer__fade">
+                    <a href="marcapaginasdemonio.html" target="_blank">
+                        <img src="./media/img/marcapaginasdemonio2.jpg" alt="diapositiva3" class="slideshowContainer__img">
+                    </a>
+                </div>
+        
+                <button type="button" id="botonSiguiente" class="slideshowContainer__next">></button>
+                <button type="button" id="botonAtras" class="slideshowContainer__prev">&lt;</button>
+            </div>
+        
+            <br>
+        
+            <div class="puntos">
+                <span class="puntos__punto">1</span>
+                <span class="puntos__punto">2</span>
+                <span class="puntos__punto">3</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- A continuación un slider con el nombre de la página, Tití Monroe, y justo al lado un icono de corazón. -->
+    <section class="slider">
+        <div class="slider__track">
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>       
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>       
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>       
+        </div>
+    </section>
+
+    <!-- Lo siguiente es un hero image. Contiene un vídeo a la izquierda y un texto descriptivo a la derecha. De fondo tiene una imagen colocada
+    a través de css.  -->
+    <section>
+        <!-- Este div es la imagen de fondo. -->
+        <div class="heroImage">
+            <!-- Este div se encarga de hacer un display flex para las dos secciones (heroVideo y heroTexto). -->
+            <div class="heroSeccion"> 
+                <div class="heroVideo">
+                    <video autoplay muted defaultMuted loop="loop" class="heroVideo__video">
+                    <source src="media/video/gifpolvera.mp4" type="video/mp4">
+                    </video>        
+                </div>
+                <div class="heroTexto">
+                    <h2 class="heroTitulo">¡Bienvenidx al universo Tití Monroe!</h2>
+                    <p class="heroParrafo">Sangre, polvo de hada, lágrimas de unicornio, la risa de un niño, lluvia de estrellas y aire rebelde...
+                        los ingredientes secretos de Tití Monroe para crear los diseños más fantasiosos y brillantes que puedas imaginar. Déjate llevar por la magia de ideas repletas de color e ingenio. Una mezcla picante de reflexión y humor. 
+                        Todo lo que imagines es posible en la mente de Tití Monroe...¿te atreves a sumergirte en la dualidad de su mundo? <br>¡Aquí puedes ser lo que quieras ser!
+                    </p>
+                </div> 
+            </div> 
+        </div>     
+    </section>
+
+     <!-- A continuación otro slider con el nombre de la página, Tití Monroe. -->
+     <section class="slider">
+        <div class="slider__track">
+         <div class="slider__slide">
+            <p class="sliderNombre">Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>       
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>   
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>       
+         <div class="slider__slide">
+            <p>Tití Monroe</p><i class="fa-solid fa-heart"></i>
+         </div>       
+        </div>
+    </section>
+
+    <!-- A continuación una sección de tres cards, cada una con un hover con un color de fondo y un texto. Cada card te lleva a una página diferente. -->
+    <section>
+        <!-- Un div para declarar el color de fondo se la sección entera. -->
+       <div class="fondoCards">
+        <!-- Un div para hacer un display flex a las tres cards.    -->
+        <div class="displayCards">
+            <!-- Aquí empieza la primera card -->
+            <div class="card">
+                <img src="./media/img/corazon2.png" alt="corazon2" class="cardImagen">
+                <div class="cardCuerpo">
+                    <div class="cardText">
+                        <a href="" class="enlaceCard" target="_blank">
+                            <h3>Láminas TM</h3>
+                            <p>5-20€</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda card. -->
+            <div class="card">
+                <img src="./media/img/corazon1.png" alt="corazon1" class="cardImagen">
+                <div class="cardCuerpo">
+                    <div class="cardText">
+                        <a href="marcapaginas.html" class="enlaceCard" target="_blank">
+                            <h3>Marcapáginas TM</h3>
+                            <p>4€</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera card. -->
+            <div class="card">
+                <img src="./media/img/corazon3.png" alt="corazon3" class="cardImagen">
+                <div class="cardCuerpo">
+                    <div class="cardText__descripcion">
+                        <a href="contacto.html" class="enlaceCard" target="_blank">
+                            <p>¿Tienes un diseño en mente? ¡Contácta conmigo para hacer realidad tus sueños!</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vuelvo a escribir las tres cards para hacer una versión para móvil. Se cambia el nombre de las clases.  -->
+            <!-- Primera card para móvil -->
+            <div class="cardMovil">
+                <img src="./media/img/corazon2.png" alt="corazon2" class="cardImagen__movil">
+                <div class="cardCuerpo__movil">
+                    <div class="cardText__movil">
+                        <a href="" class="enlaceCard__movil" target="_blank">
+                            <h3>Láminas TM</h3>
+                            <p>5-20€</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda card para móvil. -->
+            <div class="cardMovil">
+                <img src="./media/img/corazon1.png" alt="corazon1" class="cardImagen__movil">
+                <div class="cardCuerpo__movil">
+                    <div class="cardText__movil">
+                        <a href="marcapaginas.html" class="enlaceCard__movil" target="_blank">
+                            <h3>Marcapáginas TM</h3>
+                            <p>4€</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera card para móvil. -->
+            <div class="cardMovil">
+                <img src="./media/img/corazon3.png" alt="corazon3" class="cardImagen__movil">
+                <div class="cardCuerpo__movil">
+                    <div class="cardText__descripcion--movil">
+                        <a href="contacto.html" class="enlaceCard__movil" target="_blank">
+                            <p>¿Tienes un diseño en mente? ¡Contácta conmigo para hacer realidad tus sueños!</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    </section>
+</main>
+
+    <!-- Por último, el footer. Contiene los iconos de las redes sociales (Twitter, Instagram, Linkedln y correo Gmail), y los mismos títulos
+    de la barra de navegación (Home, Tienda, Sobre mí y Contacto) para que al clikcar te lleve a su página correspondiente.Todos poseen un 
+    hover de color morado. -->
+    <footer>
+        <div class="footer">
+            <div class="footerContenido__media">
+                <a href="https://twitter.com/PaquiGuzmn" class="footerEnlace footerEnlace__icono__movil" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/titimonroe_/?igshid=YmMyMTA2M2Y%3D" class="footerEnlace footerEnlace__icono__movil" target="_blank" ><i class="fa-brands fa-instagram"></i>
+                <a href="https://www.linkedin.com/in/paqui-guzm%C3%A1n-s%C3%A1nchez-240152234/" class="footerEnlace footerEnlace__icono__movil" target="_blank"><i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.google.com/intl/es/gmail/about/" class="footerEnlace footerEnlace__icono__movil"><i class="fa-regular fa-envelope"></i>
+                <br>
+                <div class="footerContenido__texto">
+                    <a href="index.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Home</span></a>
+                    <a href="marcapaginas.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Tienda</span></a>
+                    <a href="sobremi.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Sobre mí</span></a>
+                    <a href="contacto.html" class="footerEnlace footerEnlace__texto__movil" target="_blank"><span>Contacto</span></a>
+                </div>  
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="./index.js"></script>
+</html>
